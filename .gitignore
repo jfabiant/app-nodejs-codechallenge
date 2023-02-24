@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# transaction-service
+transaction-service/node_modules/
+
+# antifraud-service
+antifraud-service/node_modules/
