@@ -21,13 +21,6 @@ let brokers = [process.env.BROKER as string];
     await consumer.subscribe({ topic: transactionsTopic });
     await consumer.run({
       eachMessage: async ({ message, partition, topic }) => {
-        console.log("==== evento llego ===");
-        console.log({
-          value: message.value?.toString(),
-          partition,
-          topic
-        });
-
         if (message.value) {
 
           let transaction: Transaction = JSON.parse(message.value?.toString());
